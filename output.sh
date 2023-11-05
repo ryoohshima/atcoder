@@ -1,0 +1,1 @@
+node $1/answer.js < $1/input.txt

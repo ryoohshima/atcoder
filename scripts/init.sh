@@ -31,12 +31,12 @@ for p in $PROBLEMS; do
   touch "$DIR/input3.txt"
 
   cat << 'EOF' > "$DIR/answer.js"
-function Main(input) {
-  input = input.split('\n');
+const main = (input) => {
+  const input_values = input.split("\n").filter(Boolean);
+};
 
-}
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
 
-Main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 EOF
   echo "  作成: $DIR"
 done
